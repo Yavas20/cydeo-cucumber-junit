@@ -45,12 +45,12 @@ public class Hooks {
     @BeforeStep
     public void setupStep(){
 
-        System.out.println("=== applying setup using @BeforeStep");
+       // System.out.println("=== applying setup using @BeforeStep");
     }
 
     @AfterStep
     public void afterStep(){
-        System.out.println("=== applying teardown using @AfterStep");
+        //System.out.println("=== applying teardown using @AfterStep");
     }
 
 }

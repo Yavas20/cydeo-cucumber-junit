@@ -51,4 +51,10 @@ public class WikiStepDefinitions {
 
     }
 
+    @Then("User sees {string} is in the image header")
+    public void userSeesIsInTheImageHeader(String name) {
+
+        Assert.assertTrue(wikiSearchPage.image.getText().equals(name));
+
+    }
 }
