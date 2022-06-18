@@ -27,11 +27,11 @@ public class BrowserUtils {
         }
     }
     /*
-        This method accepts 3 arguments.
-        Arg1: webdriver
-        Arg2: expectedInUrl : for verify if the url contains given String.
+        This method accepts 2 arguments.
+
+        Arg1: expectedInUrl : for verify if the url contains given String.
             - If condition matches, will break loop.
-        Arg3: expectedInTitle to be compared against actualTitle
+        Arg2: expectedInTitle to be compared against actualTitle
          */
     public static void switchWindowAndVerify(String expectedInUrl, String expectedInTitle){
 
