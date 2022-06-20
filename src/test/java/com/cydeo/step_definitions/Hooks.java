@@ -37,7 +37,7 @@ public class Hooks {
 
 
 
-        //Driver.closeDriver();
+        Driver.closeDriver();
         //System.out.println("===Closing browser using cucumber @after");
         //System.out.println("===Scenario ended / take screenshot if failed");
     }

@@ -3,6 +3,7 @@ package com.cydeo.step_definitions;
 import com.cydeo.pages.BasePage;
 import com.cydeo.pages.OrderPage;
 import com.cydeo.pages.WebTableLoginPage;
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -40,12 +41,20 @@ public class WebTableOrderDefinitions {
     }
 
     @When("user enters quantity {int}")
-    public void user_enters_quantity(Integer int1) {
+    public void user_enters_quantity(Integer quantity) {
 
-        orderPage.inputQuantity.clear();
+        //accepting int argument and sending it using sendKeys() method
+        //since sendKeys() method only accepts String, we need to either concat with ""
+        //or send String.valueOf(int);
+        //orderPage.inputQuantity.sendKeys(String.valueOf(quantity));
 
-       // orderPage.inputQuantity.sendKeys(Keys.BACK_SPACE, "" + int1);
-        orderPage.inputQuantity.sendKeys(""+int1);
+        //clear() method will delete whatever is in the input box
+        //orderPage.inputQuantity.clear();
+
+        //imitating pressing back_space button from keyboard to delete existing input
+        orderPage.inputQuantity.sendKeys(Keys.BACK_SPACE);
+
+        orderPage.inputQuantity.sendKeys(quantity+"");
 
     }
 
@@ -85,15 +94,10 @@ public class WebTableOrderDefinitions {
     }
 
     @When("user selects credit card type {string}")
-    public void user_selects_credit_card_type(String string) {
+    public void user_selects_credit_card_type(String expectedCardType) {
 
-        for (WebElement each : orderPage.cardType) {
-
-           if(each.getText().equalsIgnoreCase(string)){
-               each.click();
-           }
-
-        }
+        //This line will loop through the list and decide which radio button to click
+        BrowserUtils.clickRadioButton(orderPage.cardType, expectedCardType);
 
 
         }

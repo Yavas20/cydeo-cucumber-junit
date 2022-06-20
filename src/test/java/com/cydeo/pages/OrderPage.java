@@ -34,8 +34,8 @@ public class OrderPage extends BasePage {
     @FindBy(name = "zip")
     public WebElement inputZip;
 
-    //@FindBy(name = "card")
-    @FindBy(xpath = "//label[@class='radio']")
+    @FindBy(name = "card")
+    //@FindBy(xpath = "//label[@class='radio']")
     public List<WebElement> cardType;
 
     @FindBy(name = "cardNo")
