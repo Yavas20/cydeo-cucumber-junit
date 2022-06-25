@@ -1,3 +1,4 @@
+
 Feature: Calculate different percentage values
 
   Scenario: User calculates %5 results

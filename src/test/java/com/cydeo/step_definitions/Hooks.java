@@ -8,6 +8,7 @@ import org.openqa.selenium.TakesScreenshot;
 public class Hooks {
 
     @Before(order = 0)
+
     public void setupScenario(){
 
         System.out.println("===Setting up browser using cucumber @before");
