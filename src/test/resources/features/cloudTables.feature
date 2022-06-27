@@ -1,4 +1,4 @@
-@wip
+
 Feature: DDT example with CloudTables
 
   Scenario: Adding one person
