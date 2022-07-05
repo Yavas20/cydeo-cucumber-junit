@@ -3,7 +3,7 @@ Feature: Calculator Tests
   Background:
     Given User is on calculator page
 
-
+  @smoke
   Scenario: Test Adding
     When User clicks "5" on calculator
     And User clicks "+" on calculator
